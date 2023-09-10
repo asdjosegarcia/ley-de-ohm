@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ley de Ohm</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="ley_de_ohm.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@400;700&display=swap');
@@ -18,38 +20,70 @@
     </header>
     <main>
         <section id="voltage">
-            <h3>Calcular Voltaje:</h3>
-            <p>Para calcular el voltaje se multiplica la Corriente por la Resistencia</p>
-            <div class="main-voltage-input">
-                <p>Corriente <input type="Number" id="input-stream-calc-voltage" class="main-input" placeholder="10"> A
-                </p>
-                <p class="mathematical-operator">X</p>
-                <p>Resistencia <input type="Number" id="input-resistence-calc-voltage" class=" main-input"
-                        placeholder="101"> Ω</p>
-                <button type="button" id="btn-calc-volt" class="calculate-button">Calcular</button>
-                <span id="voltage-result">Voltaje <span class="mathematical-operator">= <span /><span
-                            id="calc-voltage-result" class="result">- - - -<span /></span>
-            </div>
+            <h3 class="section-title">Calcular Voltaje:</h3>
+            <p class="section-description">Para calcular el voltaje se multiplica la Corriente por la Resistencia</p>
+            <p class="section-text-input">Corriente </p>
+            <input type="Number" min="0" id="input-stream-calc-voltage" class="section-input" placeholder="10">
+            <p>A</p>
+            <p class="mathematical-operator">X</p>
+            <p class="section-text-input">Resistencia </p>
+            <input type="Number" min="0" id="input-resistence-calc-voltage" class=" section-input" placeholder="101">
+            <p> Ω</p>
+            <button type="button" id="btn-calc-volt" class="btn calculate-button">Calcular</button>
+            <span id="voltage-result" class="section-result">Voltaje
+                <span class="mathematical-operator">= </span>
+                <span id="calc-voltage-result" class="result">- - - -</span>
+            </span>
+            <button type="button" id="btn-info-voltage" class="btn-info btn">?</button>
         </section>
         <section id="stream">
-            <h3>Calcular Corriente:</h3>
-            <p>Para calcular la Corriente se divide el Volteje por la Resistencia</p>
-            <p>Voltaje <input type="Number" id="input-voltage-calc-stream" class="main-input" placeholder="12"> V</p>
+            <h3 class="section-title">Calcular Corriente:</h3>
+            <p class="section-description">Para calcular la Corriente se divide el Volteje por la Resistencia</p>
+            <p class="section-text-input">Voltaje</p>
+            <input type="Number" min="0" id="input-voltage-calc-stream" class="section-input" placeholder="12">
+            <p>V</p>
             <p class="mathematical-operator">/</p>
-            <p>Resitencia <input type="Number" id="input-resistence-calc-stream" class="main-input" placeholder="101"> Ω</p>
-            <button type="button" id="btn-calc-stream" class="calculate-button">Calcular</button>
-            <span id="stream-result">Corriente <span class="mathematical-operator">= <span /><span
-                        id="calc-stream-result" class="result">- - - -<span /></span>
+            <p class="section-text-input">Resitencia</p>
+            <input type="Number" min="0" id="input-resistence-calc-stream" class="section-input" placeholder="101">
+            <p>Ω</p>
+            <button type="button" id="btn-calc-stream" class="calculate-button btn">Calcular</button>
+            <div class="resistence-result-container">
 
+                <span id="stream-result" class="section-result">Corriente
+                    <span class="mathematical-operator">= </span>
+                    <span id="calc-stream-result" class="result">- - - -</span>
+                </span>
+                <button type="button" id="btn-calc-mah" class="section-mah-a-button btn">mAh</button>
+            </div>
+
+            <button type="button" id="btn-info-stream" class="btn-info btn">?</button>
         </section>
         <section id="resistence">
-            <h3>Calcular Resistencia:</h3>
-            <p>Para calcular la Resistencia se divide voltaje por Corriente</p>
-            <p>Voltaje <input type="Number" id="input-voltage-calc-resistence" class="main-input" placeholder="12"> V</p>
+            <h3 class="section-title">Calcular Resistencia:</h3>
+            <p class="section-description">Para calcular la Resistencia se divide voltaje por Corriente</p>
+            <p class="section-text-input">Voltaje </p>
+            <input type="Number" min="0" id="input-voltage-calc-resistence" class=" section-input" placeholder="12">
+            <p>V</p>
             <p class="mathematical-operator">/</p>
-            <p>Corriente <input type="Number" id="input-stream-calc-resistence" class="main-input" placeholder="10"> A</p>
-            <button type="button" id="btn-calc-reistence" class="calculate-button">Calcular</button>
-            <span id="resistence-result">Resistencia <span class="mathematical-operator">= <span /><span id="calc-resistence-result" class="result">- - - -<span /></span>
+            <p class="section-text-input">Corriente </p>
+            <input type="Number" min="0" id="input-stream-calc-resistence" class="section-input" placeholder="10">
+            <p>A</p>
+            <button type="button" id="btn-calc-reistence" class="calculate-button btn">Calcular</button>
+            <span id="resistence-result" class="section-result">Resistencia
+                <span class="mathematical-operator">= </span>
+                <span id="calc-resistence-result" class="result">- - - -</span>
+            </span>
+            <button type="button" id="btn-info-resitence" class="btn-info btn">?</button>
+        </section>
+        <section id="info">
+            <p class="question-mark">?</p>
+            <p>La Ley de Ohm describe la relación entre tres variables de un circuito eléctrico: la corriente eléctrica
+                (I),
+                voltaje (V) y la resistencia (R). Esta ley establece que:</p>>
+            <br>
+            <img src="./img/Triangulo-ohm.png">
+            <!--                 <p>La corriente eléctrica (I) que fluye a través de un conductor es directamente proporcional a la tensión
+                    (V) aplicada a través del conductor e inversamente proporcional a la resistencia (R) del conductor.</p> -->
         </section>
 
     </main>
