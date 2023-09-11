@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'TickingTimebombBB_ital';/*nombre con el que se agrega la fuente*/
-    src: url('TickingTimebombBB_ital.otf')format('truetype');
+    src: url('./fonts/TickingTimebombBB_ital.otf')format('truetype');
 }
 * {
     margin: 0;
