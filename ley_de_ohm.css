@@ -7,11 +7,10 @@
     font-size: 62,5%;
     color: aliceblue;
 }
-html {
-    opacity: 0.8;
-    background-image: linear-gradient(#048600 2px, transparent 2px), linear-gradient(90deg, #048600 2px, transparent 2px), linear-gradient(#048600 1px, transparent 1px), linear-gradient(90deg, #048600 1px, #000000 1px);
-    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+.body {
+background-image:  linear-gradient(#2c2c2c 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(90deg, #2c2c2c 1.4000000000000001px, transparent 1.4000000000000001px), linear-gradient(#2c2c2c 0.7000000000000001px, transparent 0.7000000000000001px), linear-gradient(90deg, #2c2c2c 0.7000000000000001px, #242424 0.7000000000000001px);
+background-size: 35px 35px, 35px 35px, 7px 7px, 7px 7px;
+background-position: -1.4000000000000001px -1.4000000000000001px, -1.4000000000000001px -1.4000000000000001px, -0.7000000000000001px -0.7000000000000001px, -0.7000000000000001px -0.7000000000000001px;
     font-family: 'Yanone Kaffeesatz','TickingTimebombBB_ital', sans-serif;
     min-width: 480px;
 }
@@ -85,7 +84,6 @@ section:hover{
     border-color: #09ff00; /* Cambiar el color del borde cuando se hace clic en el input con la clase "mi-input" */
 }
 
-
 .mathematical-operator{
  color: #9acd32;
  font-weight: bold;
@@ -95,7 +93,7 @@ section:hover{
 
 .section-result{
     justify-self:start;
-    margin-top: 3px;
+    /* margin-top: 3px; */
 }
 
 .result{
@@ -113,12 +111,13 @@ section:hover{
     border: 2px inset yellowgreen;
     border-radius: 5px;
     padding: 3px;
-    font-size: 24px;
+    font-size: 26px;
     justify-self:center;
 }
 .calculate-button{
     width: 100px;
-    margin: 5px;
+    margin-bottom: 10px;
+    padding: 0 0px;
 }
 
 .resistence-result-container{
@@ -128,6 +127,7 @@ section:hover{
 .section-mah-a-button{
     width: 100px;
     width: 60px;
+    padding-top: -5px;
 
 }
 .btn-info{
@@ -141,10 +141,8 @@ section:hover{
     background-color: rgba(0, 0, 0, 0.527);
     min-height: 250px;
     z-index: 1;
-    /* display: grid; */
-    grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(2,auto);
-
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(1,auto);
 } 
 .question-mark{
     font-family: 'TickingTimebombBB_ital';
@@ -155,9 +153,57 @@ section:hover{
     font-size: 300px;
     width: 70%;
 }
-img{
-    height: 250px;
+.dissable{
+    display: none;
 }
+
+#info .info-page{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+    text-align: start;
+}
+#info .info-page-selector-container{
+    border-left: 4px  Double  yellowgreen;
+    border-bottom: 4px  Double  yellowgreen;
+    border-radius: 0px 0px 0px 40%;
+    position: absolute;
+    right: 20px;
+    width: 50px;
+    margin-right: 5px;
+    background-color: #000000;
+}
+
+#info .info-page-selector-container .btn-info-selector{
+    width: 50px;
+    margin-right: 5px;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+#info .info-page-selector-container .btn-info-selector-end{
+    border-bottom: none;
+}
+#info .first-info-page .img-ohm-triangle{
+    height: 250px;
+    grid-column: 3/4;
+    grid-row: 1/4;
+    padding-top: 10px;
+}
+#info .first-info-page .first-page-text{
+    grid-column: 1/3;
+}
+#info .first-info-page .first-page-ul{
+    grid-column: 1/3;
+}
+#info .first-info-page .next-button{
+    height: 40px;
+    justify-self: start;
+    grid-column: 1/3;
+}
+
+
 
 @media screen and (min-width: 1080px) {
     main{

@@ -14,9 +14,9 @@
     </style>
 </head>
 
-<body>
+<body class="body">
     <header>
-        <h1 class="header-title">Ley de Ohm</h1>
+        <h1 class="header-title">Ley de Ohm Ω</h1>
     </header>
     <main>
         <section id="voltage">
@@ -28,7 +28,7 @@
             <p class="mathematical-operator">X</p>
             <p class="section-text-input">Resistencia </p>
             <input type="Number" min="0" id="input-resistence-calc-voltage" class=" section-input" placeholder="101">
-            <p> Ω</p>
+            <p>Ω</p>
             <button type="button" id="btn-calc-volt" class="btn calculate-button">Calcular</button>
             <span id="voltage-result" class="section-result">Voltaje
                 <span class="mathematical-operator">= </span>
@@ -77,11 +77,24 @@
         </section>
         <section id="info">
             <p class="question-mark">?</p>
-            <p>La Ley de Ohm describe la relación entre tres variables de un circuito eléctrico: la corriente eléctrica
-                (I),
-                voltaje (V) y la resistencia (R). Esta ley establece que:</p>>
-            <br>
-            <img src="./img/Triangulo-ohm.png">
+            <div class="info-page-selector-container">
+                    <button class="btn btn-info-selector">⏏</button>
+                    <button class="btn btn-info-selector">V</button>
+                    <button class="btn btn-info-selector">A</button>
+                    <button class="btn btn-info-selector  btn-info-selector-end">Ω</button>
+            </div>
+            <div class="first-info-page info-page "> 
+                <p class="first-page-text">La Ley de Ohm es un principio fundamental en la electricidad que describe la relación entre tres variables de un circuito eléctrico:</p>
+                <ul class="first-page-ul ">
+                    <li>Corriente (I)(A)</li>
+                    <li>Voltaje (V)</li>
+                    <li>Resistencia (R)(Ω)</li>
+                </ul>
+                <!-- <p class="right">Esta ley establece que:</p> -->
+                <br>
+                <img class="img-ohm-triangle" src="./img/Triangulo-ohm.png">
+                <button  type="button" class="btn next-button">Siguiente >></button>
+            </div>
             <!--                 <p>La corriente eléctrica (I) que fluye a través de un conductor es directamente proporcional a la tensión
                     (V) aplicada a través del conductor e inversamente proporcional a la resistencia (R) del conductor.</p> -->
         </section>
