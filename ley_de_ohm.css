@@ -249,7 +249,7 @@ section:hover{
     justify-self:start;
     width: 150px;
 }
-#info .voltage-info-page .resitence-challenge{
+#info .voltage-info-page .resitance-challenge{
     grid-column: 2/3;
     align-self: end;
     padding-left: 27%;

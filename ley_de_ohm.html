@@ -28,14 +28,14 @@
                     placeholder="10">
                 <button id="btn-calc-volt-mah" class="btn btn-input">mAh</button>
             </span>
-            <p>A</p>
-            <p class="mathematical-operator">X</p>
+            <p id="Amp-mAh-symbol-voltage">A</p>
+            <p id="mathematical-operation-voltage" class="mathematical-operator">X</p>
             <p class="section-text-input">Resistencia </p>
             <span class=" section-input-container">
-                <input type="Number" min="0" id="input-resistence-calc-voltage" class="section-input "
+                <input type="Number" min="0" id="input-resistance-calc-voltage" class="section-input "
                     placeholder="101">
             </span>
-            <!-- <input type="Number" min="0" id="input-resistence-calc-voltage" class=" section-input" placeholder="101"> -->
+            <!-- <input type="Number" min="0" id="input-resistance-calc-voltage" class=" section-input" placeholder="101"> -->
             <p>Ω</p>
             <button type="button" id="btn-calc-volt" class="btn calculate-button">Calcular</button>
             <span id="voltage-result" class="section-result">Voltaje
@@ -53,15 +53,15 @@
             </span>
             <!-- <input type="Number" min="0" id="input-voltage-calc-stream" class="section-input" placeholder="12"> -->
             <p>V</p>
-            <p class="mathematical-operator">/</p>
+            <p id="mathematical-operation-stream" class="mathematical-operator">/</p>
             <p class="section-text-input">Resitencia</p>
             <span class=" section-input-container">
-                <input type="Number" min="0" id="input-resistence-calc-stream" class="section-input" placeholder="12">
+                <input type="Number" min="0" id="input-resistance-calc-stream" class="section-input" placeholder="12">
             </span>
-            <!-- <input type="Number" min="0" id="input-resistence-calc-stream" class="section-input" placeholder="101"> -->
+            <!-- <input type="Number" min="0" id="input-resistance-calc-stream" class="section-input" placeholder="101"> -->
             <p>Ω</p>
             <button type="button" id="btn-calc-stream" class="calculate-button btn">Calcular</button>
-            <!-- <div class="resistence-result-container"> -->
+            <!-- <div class="resistance-result-container"> -->
                 <span class="section-result">
                     Corriente
                     <span class="mathematical-operator">=</span>
@@ -74,29 +74,29 @@
 
             <button type="button" id="" class="btn-info btn btn-info-stream">?</button>
         </section>
-        <section id="resistence">
+        <section id="resistance">
             <h3 class="section-title">Calcular Resistencia:</h3>
             <p class="section-description">Para calcular la Resistencia se divide voltaje por Corriente</p>
             <p class="section-text-input">Voltaje </p>
             <span class=" section-input-container">
-                <input type="Number" min="0" id="input-voltage-calc-resistence" class="section-input input-resistence"
+                <input type="Number" min="0" id="input-voltage-calc-resistance" class="section-input input-resistance"
                     placeholder="100">
             </span>
-            <!-- <input type="Number" min="0" id="input-voltage-calc-resistence" class=" section-input" placeholder="12"> -->
+            <!-- <input type="Number" min="0" id="input-voltage-calc-resistance" class=" section-input" placeholder="12"> -->
             <p>V</p>
-            <p class="mathematical-operator">/</p>
+            <p id="mathematical-operation-resistance" class="mathematical-operator">/</p>
             <p class="section-text-input">Corriente </p>
             <div class=" section-input-container">
-                <input type="Number" min="0" id="input-stream-calc-resistence" class="section-input input-mah"
+                <input type="Number" min="0" id="input-stream-calc-resistance" class="section-input input-mah"
                     placeholder="10">
                 <button id="btn-calc-res-mah" class="btn btn-input">mAh</button>
             </div>
-            <!-- <input type="Number" min="0" id="input-stream-calc-resistence" class="section-input" placeholder="10"> -->
-            <p>A</p>
-            <button type="button" id="btn-calc-reistence" class="calculate-button btn">Calcular</button>
-            <span id="resistence-result" class="section-result">Resistencia
+            <!-- <input type="Number" min="0" id="input-stream-calc-resistance" class="section-input" placeholder="10"> -->
+            <p id="Amp-mAh-symbol-resistance">A</p>
+            <button type="button" id="btn-calc-reistance" class="calculate-button btn">Calcular</button>
+            <span id="resistance-result" class="section-result">Resistencia
                 <span class="mathematical-operator">= </span>
-                <span id="calc-resistence-result" class="result">- - - -</span>
+                <span id="calc-resistance-result" class="result">- - - -</span>
             </span>
             <button type="button" id="" class="btn-info btn btn-info-resitence">?</button>
         </section>
@@ -131,14 +131,14 @@
             <div id="voltage-first-info-page-container" class="voltage-info-page-container dissable">
                 <div class="voltage-info-page info-page dissable">
                     <h3 class="voltage-title">Voltaje</h3>
-                    <p class="voltage-formula">Si en un circuito sabemos que el Amperaje es de <span>23.6 mAh</span> y
-                        la resitencia es de <span>380 ohm</span>. <br>¿de cuanto es el voltaje?</p>
-                    <button class="btn btn-challenge-reload">Regenerar ⟳</button>
-                    <span class="resitence-challenge">380 ohm </span>
+                    <p class="voltage-formula">Si en un circuito sabemos que la Corriente es de <span class="stream-voltage-challenge">23.6 mAh</span> y
+                        la Resitencia es de <span class="resistance-voltage-challenge">380 ohm</span>. <br>¿de cuanto es el voltaje?</p>
+                    <button id="btn-regenerate-voltage" class="btn btn-challenge-reload">Regenerar ⟳</button>
+                    <span id="" class="resitance-challenge resistance-voltage-challenge">380 ohm </span>
 
                     <!-- <div class="example-circuit-container"> -->
-                    <span class="stream-challenge">23.6 mAh</span>
-                    <span class="voltage-challenge"> <button class="btn btn-voltage-challenge">? </button> V</span>
+                    <span id="" class="stream-challenge stream-voltage-challenge">23.6 mAh</span>
+                    <span id="voltage-voltage-challenge" class="voltage-challenge"> <button id="btn-reveal-voltage" class="btn btn-voltage-challenge">? </button> V</span>
 
                     <img class="img-example-circuit" src="img/example_circuit.png" alt="">
                     <!-- </div> -->
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div id="resitence-first-info-page-container" class="dissable">
-                <div class="resistence-info-page info-page dissables">
+                <div class="resistance-info-page info-page dissables">
                     Resistencia info
                 </div>
             </div>
@@ -163,6 +163,7 @@
 
     <script src="./JS/ley_de_ohm.js"></script>
     <script src="./JS/navigation.js"></script>
+    <script src="./JS/exercises.js"></script>
 </body>
 
 </html>
