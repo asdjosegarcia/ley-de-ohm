@@ -261,12 +261,13 @@ section:hover{
     grid-column: 2/3;
 }
 #info .voltage-info-page .voltage-challenge{
-    margin-left: 20%;
+    /* margin-left: 5%; */
     grid-row: 6/8;
     grid-column: 1/2;
 }
 #info .voltage-info-page .btn-voltage-challenge{
-    width: 40px;
+    margin-right: 30%;
+    width: 120px;
     height: 40px;
 }
 
