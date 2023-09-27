@@ -23,15 +23,12 @@ background-position: -1.4000000000000001px -1.4000000000000001px, -1.40000000000
     font-family: 'Yanone Kaffeesatz','TickingTimebombBB_ital', sans-serif;
     min-width: 480px;
 }
-header{
-    margin: 0 auto 0 auto;
-}
 .header-title {
     text-align: center;
     color: var(--primary-green);
     font-size: 70px;
     text-shadow: 10px 20px 10px var(--black);
-    text-underline-offset: 20px;
+    margin:  25px 0 20px 0;
     -webkit-text-stroke:2px black;
 }
 main {
@@ -70,7 +67,7 @@ section:hover{
     justify-self:center;
 }
 .section-title{
-    margin-top:20px;
+    margin-top:10px;
     grid-column: 1/4;
     grid-row: 1/2;
 }
@@ -230,48 +227,58 @@ section:hover{
     grid-column: 1/3;
 }
 
-#info .voltage-info-page{
+#info .variable-info-page, .stream-info-page{
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(8,.2fr);
 
 }
-#info .voltage-info-page .voltage-title{
+#info .variable-info-page .variable-title {
     grid-column: 1/3;
     text-align: center;
 }
-#info .voltage-info-page .voltage-formula{
+#info .variable-info-page .variable-formula{
     padding-right: 7%;
     grid-row: 2/3;
     grid-column: 1/3;
 }
-#info .voltage-info-page .btn-challenge-reload{
+#info .variable-info-page .btn-variable-reload{
     grid-row: 3/4;
     justify-self:start;
     width: 150px;
 }
-#info .voltage-info-page .resitance-challenge{
+#info .variable-info-page .resitance-challenge{
     grid-column: 2/3;
     align-self: end;
     padding-left: 27%;
 }
 
-#info .voltage-info-page .stream-challenge{
+#info .variable-info-page .stream-challenge, .btn-stream-challenge{
     padding: 7% 0 0 15%;
     grid-row: 6/8;
     grid-column: 2/3;
 }
-#info .voltage-info-page .voltage-challenge{
-    /* margin-left: 5%; */
-    grid-row: 6/8;
-    grid-column: 1/2;
-}
-#info .voltage-info-page .btn-voltage-challenge{
-    margin-right: 30%;
+#info .variable-info-page .btn-reveal{
     width: 120px;
     height: 40px;
 }
 
-#info .voltage-info-page .img-example-circuit{
+#info .variable-info-page .btn-voltage-challenge, .voltage-challenge{
+    grid-row: 6/8;
+    grid-column: 1/2;
+    margin-right: 30%;
+    
+}
+#info .voltage-challenge{
+    margin-left: 30%;
+}
+#info .variable-info-page .btn-stream-challenge {
+    margin: 2.2% 6.5% 0% 0   ;
+    padding: 2% 0 0 0 ;
+    width: 65%;
+    height: 80%;
+}
+
+#info .variable-info-page .img-example-circuit{
     width: 100%;
     grid-column: 1/3;
     grid-row: 4/9;  
