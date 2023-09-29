@@ -277,6 +277,9 @@ section:hover{
     width: 65%;
     height: 80%;
 }
+#info .variable-info-page .btn-resistence-challenge{
+    margin-right: 27%;
+}
 
 #info .variable-info-page .img-example-circuit{
     width: 100%;
