@@ -56,7 +56,6 @@ section{
 }
 section:hover{
     background-color: var(--transparent-black-2) /* rgba(0, 0, 0, 0.327) */;
-
 }
 .btn{
     background-color: var(--black);
@@ -287,8 +286,6 @@ section:hover{
     grid-row: 4/9;  
     z-index: -1;
 }
-
-
 
 
 .dissable{
