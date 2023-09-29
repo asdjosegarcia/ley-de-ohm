@@ -11,7 +11,6 @@ const btnInfoHome=document.querySelector('.btn-info-home');
 const btnInfoVoltage=document.querySelectorAll('.btn-info-voltage');
 const btnInfoStream=document.querySelectorAll('.btn-info-stream');
 const btnInfoResistence=document.querySelectorAll('.btn-info-resitence');
-console.log(btnInfoVoltage)
 
 ////////////////////////////////btn functions
 btnInfoHome.addEventListener('click',()=> enableDisabble(homeInfo))
