@@ -35,7 +35,6 @@ function regenerate(challengeOperation) {
     const resistance = (Math.floor(Math.random() * (200 - 10 + 1)) + 10) * 10//numero entero aleatorio entre 2000 que termina en 0
     const voltage = Math.floor(Math.random() * (120 - 1 + 1)) + 1
     const stream = (Math.random() * (3 - 0) + 0).toFixed(3) //numero decimal enetre 1 y 10, ojo toFixed lo vuelve texto
-    console.log({ resistance, voltage, stream })
     switch (true) {
         case (challengeOperation === 'voltage'):
             resistanceVariableChallenge[0].textContent = resistance + 'Ω'
@@ -62,7 +61,6 @@ function regenerate(challengeOperation) {
             resistanceResistanceChellenge.textContent = 'Ω ?'
             break;
         default:
-            console.log('default')
             break;
     }
 }

@@ -220,7 +220,7 @@ section:hover{
 #info .first-info-page .first-page-ul{
     grid-column: 1/3;
 }
-#info .first-info-page .next-button{
+#info .first-info-page .btn-next{
     height: 40px;
     justify-self: start;
     grid-column: 1/3;

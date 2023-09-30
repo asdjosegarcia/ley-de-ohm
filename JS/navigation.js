@@ -8,12 +8,14 @@ const infoPageResistence=document.querySelector('#resitence-first-info-page-cont
 
 /////////////////////////////////btn
 const btnInfoHome=document.querySelector('.btn-info-home');
+const btnInfoHomeNext=document.querySelector('.btn-next');
 const btnInfoVoltage=document.querySelectorAll('.btn-info-voltage');
 const btnInfoStream=document.querySelectorAll('.btn-info-stream');
 const btnInfoResistence=document.querySelectorAll('.btn-info-resitence');
 
 ////////////////////////////////btn functions
 btnInfoHome.addEventListener('click',()=> enableDisabble(homeInfo))
+btnInfoHomeNext.addEventListener('click',()=>enableDisabble(homeInfoTwo))
 btnInfoVoltage[0].addEventListener('click',()=> {enableDisabble(infoPageVoltage)})
 btnInfoVoltage[1].addEventListener('click',()=> {enableDisabble(infoPageVoltage)})
 btnInfoStream[0].addEventListener('click',()=> enableDisabble(infoPageStream))
