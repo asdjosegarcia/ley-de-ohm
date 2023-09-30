@@ -25,15 +25,15 @@
             <p class="section-text-input">Corriente </p>
             <span class=" section-input-container">
                 <input type="Number" min="0" id="input-stream-calc-voltage" class="section-input input-mah"
-                    placeholder="10">
+                    placeholder="01.20">
                 <button id="btn-calc-volt-mah" class="btn btn-input">mAh</button>
             </span>
-            <p id="Amp-mAh-symbol-voltage">A</p>
+            <p id="Amp-mAh-symbol-voltage">  A  </p>
             <p id="mathematical-operation-voltage" class="mathematical-operator">X</p>
             <p class="section-text-input">Resistencia </p>
             <span class=" section-input-container">
                 <input type="Number" min="0" id="input-resistance-calc-voltage" class="section-input "
-                    placeholder="101">
+                    placeholder="400">
             </span>
             <!-- <input type="Number" min="0" id="input-resistance-calc-voltage" class=" section-input" placeholder="101"> -->
             <p>Ω</p>
@@ -56,7 +56,7 @@
             <p id="mathematical-operation-stream" class="mathematical-operator">/</p>
             <p class="section-text-input">Resitencia</p>
             <span class=" section-input-container">
-                <input type="Number" min="0" id="input-resistance-calc-stream" class="section-input" placeholder="12">
+                <input type="Number" min="0" id="input-resistance-calc-stream" class="section-input" placeholder="330">
             </span>
             <!-- <input type="Number" min="0" id="input-resistance-calc-stream" class="section-input" placeholder="101"> -->
             <p>Ω</p>
@@ -80,18 +80,16 @@
             <p class="section-text-input">Voltaje </p>
             <span class=" section-input-container">
                 <input type="Number" min="0" id="input-voltage-calc-resistance" class="section-input input-resistance"
-                    placeholder="100">
+                    placeholder="10.45">
             </span>
-            <!-- <input type="Number" min="0" id="input-voltage-calc-resistance" class=" section-input" placeholder="12"> -->
             <p>V</p>
             <p id="mathematical-operation-resistance" class="mathematical-operator">/</p>
             <p class="section-text-input">Corriente </p>
             <div class=" section-input-container">
                 <input type="Number" min="0" id="input-stream-calc-resistance" class="section-input input-mah"
-                    placeholder="10">
+                    placeholder="0.45">
                 <button id="btn-calc-res-mah" class="btn btn-input">mAh</button>
             </div>
-            <!-- <input type="Number" min="0" id="input-stream-calc-resistance" class="section-input" placeholder="10"> -->
             <p id="Amp-mAh-symbol-resistance">A</p>
             <button type="button" id="btn-calc-reistance" class="calculate-button btn">Calcular</button>
             <span id="resistance-result" class="section-result">Resistencia
@@ -117,7 +115,6 @@
                         <li>Voltaje (V)</li>
                         <li>Resistencia (R)(Ω)</li>
                     </ul>
-                    <!-- <p class="right">Esta ley establece que:</p> -->
                     <br>
                     <img class="img-ohm-triangle" src="./img/Triangulo-ohm.png">
                     <button id="" type="button" class="btn btn-next">Siguiente >></button>
@@ -125,7 +122,7 @@
             </div>
             <div id="home-second-info-page-container" class="dissable">
                 <div class="second-info-page info-page dissable">
-                    <!-- <img class="img-ohm-triangle" src="./img/Triangulo-ohm.png"> -->
+                    <!-- <img class="img-ohm-triangle" src="./img/Triangulo-ohm.png"> -->   
                     <p>La corriente eléctrica (I) que fluye a través de un conductor es directamente proporcional a la tensión
                         (V) aplicada a través del conductor e inversamente proporcional a la resistencia (R) del conductor.</p>
                 </div>
@@ -134,7 +131,7 @@
                 <div class="variable-info-page info-page ">
                     <h3 class="variable-title">Voltaje</h3>
                     <p class="variable-formula">Si en un circuito sabemos que la Corriente es de <span class="stream-variable-challenge">0.23A</span> y
-                        la Resitencia es de <span class="resistance-variable-challenge">330Ω</span>. <br>¿de cuanto es el voltaje?</p>
+                        la Resitencia es de <span class="resistance-variable-challenge">330Ω</span>. <br>¿De cuanto es el voltaje?</p>
                     <button id="btn-regenerate-voltage" class="btn btn-variable-reload">Regenerar ⟳</button>
                     <span id="" class="resitance-challenge resistance-variable-challenge">330 Ω</span>
                     <span id="" class="stream-challenge stream-variable-challenge">0.015 A</span>
@@ -146,7 +143,7 @@
                 <div class="variable-info-page info-page">
                     <h3 class="variable-title">Corriente</h3> 
                     <p class="variable-formula">Si en un circuito sabemos que el Voltaje es de <span class="voltage-variable-challenge">5V</span> y
-                        la Resitencia es de <span class="resistance-variable-challenge">330Ω</span>. <br>¿de cuanto es la corriente??</p>
+                        la Resitencia es de <span class="resistance-variable-challenge">330Ω</span>. <br>¿De cuanto es la corriente??</p>
                     <button id="btn-regenerate-stream" class="btn btn-variable-reload">Regenerar ⟳</button>
                     <span id="" class="resitance-challenge resistance-variable-challenge">330 Ω</span>
                     <button id="btn-reveal-stream" class="btn btn-stream-challenge  btn-reveal"><span id="stream-stream-challenge" >A ?</span></button>
@@ -159,7 +156,7 @@
                 <div class="variable-info-page info-page">
                     <h3 class="variable-title">Resistencia</h3> 
                     <p class="variable-formula">Si en un circuito sabemos que el Voltaje es de <span class="voltage-variable-challenge">5V</span> y
-                        la Corriente es de <span class="stream-variable-challenge">0.015A</span>. <br>¿de cuanto es la resitencia?</p>
+                        la Corriente es de <span class="stream-variable-challenge">0.015A</span>. <br>¿De cuanto es la resitencia?</p>
                     <button id="btn-regenerate-resistance" class="btn btn-variable-reload">Regenerar ⟳</button>
                     <button id="btn-reveal-resistance" class="btn btn-resistence-challenge  btn-reveal"><span id="resistance-resitance-challenge" class="">Ω ?</span></button>
                     <span id="" class="stream-challenge stream-variable-challenge">0.015 A</span>

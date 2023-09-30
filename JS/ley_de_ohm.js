@@ -34,7 +34,7 @@ btnCalcVolt.addEventListener('click', calcVoltage)
 btnCalcStream.addEventListener('click', calcStream)
 btnCalcResistance.addEventListener('click', calcResistance)
 btnCalcVoltMah.addEventListener('click',  ()=>{calcVoltMah=!calcVoltMah;calcVoltage()})//cambia el valor a true o false para que se divia entre 1000 los ampers
-btnCalcResMah.addEventListener('click',  ()=>{calcResMah=!calcResMah;calcResistance()})//cambia el valor a true o false para que se divia entre 1000 los ampers
+btnCalcResMah.addEventListener('click',  ()=>{calcResMah=!calcResMah;calcResistance()})//
 btnCalcMah.addEventListener('click', ()=>{calcStreamMah=!calcStreamMah;calcStream()})
 
 
@@ -47,9 +47,11 @@ function calcVoltage() {
         voltage=voltage/1000
         matOperationVolt.textContent='/1000 X '
         ampMahSymbolVoltage.textContent='mAh'
+        btnCalcVoltMah.textContent='A'
     }else{
         matOperationVolt.textContent='X'
         ampMahSymbolVoltage.textContent='A'
+        btnCalcVoltMah.textContent='mAh'
     }
     resultCalcVoltageSpan.innerText = voltage.toFixed(2) + ' V'
 }
@@ -80,9 +82,11 @@ function calcResistance() {
         resistance=resistance*1000
         ampMahSimbolResistance.textContent='mAh'
         matOperationResistance.textContent='X1000 /'
+        btnCalcResMah.textContent='A'
     }else{
         ampMahSimbolResistance.textContent='A'
         matOperationResistance.textContent='/'
+        btnCalcResMah.textContent='mAh'
     }
     resultCalcResistanceSpan.innerText = resistance.toFixed(2)   + ' Ω'
 }
