@@ -15,7 +15,7 @@ const voltageCalcStream = document.querySelector('#input-voltage-calc-stream')//
 const resistanceCalcStream = document.querySelector('#input-resistance-calc-stream')//input resistencia
 const btnCalcStream = document.querySelector('#btn-calc-stream')//boton calcular corriente
 const resultCalcStreamSpan = document.querySelector('#calc-stream-result')//span que nos da el resultado
-const btnCalcMah=document.querySelector('#btn-calc-mah')//boton que alterna tente mAh y A
+const btnCalStreamcMah=document.querySelector('#btn-calc-stream-mah')//boton que alterna tente mAh y A
 const matOperationStream=document.querySelector('#mathematical-operation-stream') //span que contiene la operacion matematica que se realiza
 
 //////////////////////////////////////////////////////resitenceCalc
@@ -35,7 +35,7 @@ btnCalcStream.addEventListener('click', calcStream)
 btnCalcResistance.addEventListener('click', calcResistance)
 btnCalcVoltMah.addEventListener('click',  ()=>{calcVoltMah=!calcVoltMah;calcVoltage()})//cambia el valor a true o false para que se divia entre 1000 los ampers
 btnCalcResMah.addEventListener('click',  ()=>{calcResMah=!calcResMah;calcResistance()})//
-btnCalcMah.addEventListener('click', ()=>{calcStreamMah=!calcStreamMah;calcStream()})
+btnCalStreamcMah.addEventListener('click', ()=>{calcStreamMah=!calcStreamMah;calcStream()})
 
 
 function calcVoltage() {
@@ -67,9 +67,12 @@ function calcStream() {
         resultCalcStreamSpan.innerText = stream.toFixed(2) + ' mAh'
         // ampMahSymbolStream.textContent='mAh'
         matOperationStream.textContent='X1000 /'
+        btnCalStreamcMah.textContent='A'
     }else{
         resultCalcStreamSpan.innerText = stream.toFixed(4) + ' A'   
         matOperationStream.textContent='/'
+        btnCalStreamcMah.textContent='mAh'
+
 
     }
 }
