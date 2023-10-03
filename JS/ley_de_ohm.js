@@ -80,8 +80,8 @@ function calcStream() {
             btnCalStreamcMah.textContent = 'mAh'
         }
     } else {
-        resultCalcStreamSpan.innerText = (calcStreamMah) ? '- - - - A' : '- - - - mAh'
-        btnCalStreamcMah.innerText = (calcStreamMah) ? 'mAh' : 'A'
+        resultCalcStreamSpan.innerText = (calcStreamMah) ?'- - - - mAh'  :  '- - - - A'
+        btnCalStreamcMah.innerText = (calcStreamMah) ? 'A' : 'mAh'
     }
 }
 
