@@ -22,7 +22,6 @@ background-image:  linear-gradient(#2c2c2c 1.4000000000000001px, transparent 1.4
 background-size: 35px 35px, 35px 35px, 7px 7px, 7px 7px;
 background-position: -1.4000000000000001px -1.4000000000000001px, -1.4000000000000001px -1.4000000000000001px, -0.7000000000000001px -0.7000000000000001px, -0.7000000000000001px -0.7000000000000001px;
     font-family: 'Yanone Kaffeesatz','TickingTimebombBB_ital', sans-serif;
-    min-width: 480px;
 }
 .header-title {
     text-align: center;
@@ -47,7 +46,6 @@ main {
 section{
     border: 4px Double  var(--primary-green);
     border-radius: 3px;
-    min-width: 510px;
     display: grid; 
     grid-template-columns: repeat(3,auto);
     grid-template-rows: repeat(5,auto);
@@ -196,8 +194,8 @@ section:hover{
     border-radius: 0px 0px 0px 40%;
     position: absolute;
     right: 20px;
-    width: 50px;
     margin-right: 5px;
+    width: 50px;
     background-color: var(--black);
 }
 #info .info-page-selector-container .btn-info-selector{
@@ -287,6 +285,14 @@ section:hover{
 }
 .dissable{
     display: none;
+}
+@media screen and (max-width: 560px) { /* considero que esta linea no es necesaria por que seria extremadamente raro encontrar a una persona con una pantalla con un ancho inferior a 600px */
+    #info .info-page-selector-container{
+        right: 0px;
+    }
+    main{
+        padding: 0;
+    }
 }
 @media screen and (min-width: 1080px) {
     main{
