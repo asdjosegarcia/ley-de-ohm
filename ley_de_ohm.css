@@ -77,6 +77,9 @@ section:hover{
     grid-column: 1/2;
     margin: -5px 0 5px 0;
 }
+.calculate-button{
+    visibility: hidden; /* ocultamos lo botones en caso de que los cambios no sean aceptados */
+}
 .section-input-container{   
     background-color: var(--black) ;
     border-radius: 5px;
