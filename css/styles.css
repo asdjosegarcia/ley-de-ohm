@@ -10,7 +10,7 @@
 }
 @font-face{
     font-family: 'TickingTimebombBB_ital';/*nombre con el que se agrega la fuente*/
-    src: url('./fonts/modifiedTickingTimebombBB-Italic.ttf')format('truetype');
+    src: url('../fonts/modifiedTickingTimebombBB-Italic.ttf')format('truetype');
 }
 * {
     margin: 0;
