@@ -41,24 +41,18 @@ btnCalStreamcMah.addEventListener('click', () => { calcStreamMah = !calcStreamMa
 function calcVoltage() {
     const resistance = resitenceCalcVolt.value
     const stream = streamCalcVolt.value
-    // console.log(stream)
     if (!stream == "" && !resistance == "") {
         voltage = stream * resistance;
-
         if (calcVoltMah) {
             voltage = voltage / 1000
-            matOperationVolt.textContent = '/1000 X '
-            ampMahSymbolVoltage.textContent = 'mAh'
-            btnCalcVoltMah.textContent = 'A'
-        } else {
-            matOperationVolt.textContent = 'X'
-            ampMahSymbolVoltage.textContent = 'A'
-            btnCalcVoltMah.textContent = 'mAh'
-        }
+        } 
         resultCalcVoltageSpan.innerText = voltage.toFixed(2) + ' V'
     } else {
         resultCalcVoltageSpan.innerText = '- - - - V'
     }
+    btnCalcVoltMah.innerText = (calcVoltMah) ? 'A' : 'mAh'
+    ampMahSymbolVoltage.innerText = (calcVoltMah) ? 'mAh':'A'
+    matOperationVolt.innerText = (calcVoltMah) ? '/1000 X':'X'
 }
 
 function calcStream() {
@@ -69,7 +63,6 @@ function calcStream() {
         if (calcStreamMah) {
             stream = stream * 1000
             resultCalcStreamSpan.innerText = stream.toFixed(2) + ' mAh'
-            // ampMahSymbolStream.textContent='mAh'
             matOperationStream.textContent = 'X1000 /'
             btnCalStreamcMah.textContent = 'A'
         } else {
@@ -89,19 +82,15 @@ function calcResistance() {
     if (!stream == "" && !voltage == "") {
         resistance = voltage / stream
         if (calcResMah) {
-            resistance = resistance * 1000
-            ampMahSimbolResistance.textContent = 'mAh'
-            matOperationResistance.textContent = 'X1000 /'
-            btnCalcResMah.textContent = 'A'
-        } else {
-            ampMahSimbolResistance.textContent = 'A'
-            matOperationResistance.textContent = '/'
-            btnCalcResMah.textContent = 'mAh'
-        }
+            resistance = resistance * 1000 
+        } 
         resultCalcResistanceSpan.innerText = resistance.toFixed(2) + ' Ω'
     } else {
         resultCalcResistanceSpan.innerText = '- - - - Ω'
     }
+    btnCalcResMah.innerText = (calcResMah) ? 'A' : 'mAh'
+    ampMahSimbolResistance.innerText = (calcResMah) ? 'mAh':'A'
+    matOperationResistance.innerText = (calcResMah) ? 'X1000 /':'/'
 
 }
 

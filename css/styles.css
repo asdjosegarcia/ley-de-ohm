@@ -173,7 +173,7 @@ section:hover{
     grid-template-columns: repeat(1,auto);
     grid-template-rows: repeat(1,auto);
 } 
-.question-mark{
+/* .question-mark{
     font-family: 'TickingTimebombBB_ital';
     font: bolder;
     position: absolute;
@@ -182,7 +182,7 @@ section:hover{
     font-size: 300px;
     width: 95%;
     z-index: -1;
-}
+} */
 #info .info-page{
     padding: 1% 0 0% 1.5%;
     display: grid;
