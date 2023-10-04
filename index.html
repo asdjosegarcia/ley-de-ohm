@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=0.8, user-scalable=no">
     <title>Ley de Ohm</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -36,7 +36,7 @@
                     placeholder="400" oninput="calcVoltage()">
             </span>
             <p>Ω</p>
-            <button type="button" id="btn-calc-volt" class="btn calculate-button">Calcular</button>
+            <!-- <button type="button" id="btn-calc-volt" class="btn calculate-button">Calcular</button> -->
             <span id="voltage-result" class="section-result">Voltaje
                 <span class="mathematical-operator">= </span>
                 <span id="calc-voltage-result" class="result">- - - - V</span>
@@ -52,12 +52,13 @@
             </span>
             <p>V</p>
             <p id="mathematical-operation-stream" class="mathematical-operator">/</p>
-            <p class="section-text-input">Resitencia</p>
+            <p class="section-text-input">Resistencia</p>
             <span class=" section-input-container">
                 <input type="Number" min="0" id="input-resistance-calc-stream" class="section-input" placeholder="330" oninput="calcStream()">
             </span>
             <p>Ω</p>
-            <button type="button" id="btn-calc-stream" class="calculate-button btn">Calcular</button>
+            <!-- <button type="button" id="btn-calc-stream" class="calculate-button btn">Calcular</button> -->
+            <button type="button" id="" class="btn-info btn btn-info-stream">?</button>
                 <span class="section-result">
                     Corriente
                     <span class="mathematical-operator">=</span>
@@ -66,7 +67,6 @@
                         <button id="btn-calc-stream-mah" class="btn section-mah-button">mAh</button>
                     </div>
                 </span>
-            <button type="button" id="" class="btn-info btn btn-info-stream">?</button>
         </section>
         <section id="resistance">
             <h3 class="section-title">Calcular Resistencia:</h3>
@@ -85,12 +85,12 @@
                 <button id="btn-calc-res-mah" class="btn btn-input">mAh</button>
             </div>
             <p id="Amp-mAh-symbol-resistance">A</p>
-            <button type="button" id="btn-calc-reistance" class="calculate-button btn">Calcular</button>
+            <button type="button" id="" class="btn-info btn btn-info-resitence">?</button>
+            <!-- <button type="button" id="btn-calc-reistance" class="calculate-button btn">Calcular</button> -->
             <span id="resistance-result" class="section-result">Resistencia
                 <span class="mathematical-operator">= </span>
                 <span id="calc-resistance-result" class="result">- - - - Ω</span>
             </span>
-            <button type="button" id="" class="btn-info btn btn-info-resitence">?</button>
         </section>
         <section id="info">
             <p class="question-mark">?</p>

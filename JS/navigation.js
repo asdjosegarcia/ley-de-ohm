@@ -1,4 +1,3 @@
-
 /////////////////////////////////items
 const homeInfo=document.querySelector('#home-first-info-page-container');
 const homeInfoTwo=document.querySelector('#home-second-info-page-container');
@@ -32,13 +31,11 @@ function enableDisabble(itemForEnable){
         homeInfo.classList.add('dissable')
         itemForEnable.classList.remove('dissable')
         itemForDissable=itemForEnable;
-        // console.log('new item for disable',itemForDissable)
     }else{
         itemForDissable.classList.add('dissable');
         itemForEnable.classList.remove('dissable')
         itemForDissable=itemForEnable;
     }
-    // actualPageEnable.toggle('dissable')
 }
 
 

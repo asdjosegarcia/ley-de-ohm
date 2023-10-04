@@ -22,6 +22,7 @@ background-image:  linear-gradient(#2c2c2c 1.4000000000000001px, transparent 1.4
 background-size: 35px 35px, 35px 35px, 7px 7px, 7px 7px;
 background-position: -1.4000000000000001px -1.4000000000000001px, -1.4000000000000001px -1.4000000000000001px, -0.7000000000000001px -0.7000000000000001px, -0.7000000000000001px -0.7000000000000001px;
     font-family: 'Yanone Kaffeesatz','TickingTimebombBB_ital', sans-serif;
+    /* min-width: 510px; */
 }
 .header-title {
     text-align: center;
@@ -41,13 +42,12 @@ main {
     display: grid;  
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr ;  
-    min-width: 510px;
 }
 section{
     border: 4px Double  var(--primary-green);
     border-radius: 3px;
     display: grid; 
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: 23% auto .4fr;
     grid-template-rows: repeat(5,auto);
     row-gap: 10px;
     align-items: center;
@@ -73,12 +73,9 @@ section:hover{
     grid-column: 1/4;
     grid-row: 2/3;
 }
-.section-text-input, .calculate-button{
+ .section-text-input /* .calculate-button */{
     grid-column: 1/2;
     margin: -5px 0 5px 0;
-}
-.calculate-button{
-    visibility: hidden; /* ocultamos lo botones en caso de que los cambios no sean aceptados */
 }
 .section-input-container{   
     background-color: var(--black) ;
@@ -127,6 +124,7 @@ section:hover{
     justify-self:start;
 }
 .section-result{
+    grid-column:2/4;
     justify-self:start;
     display: inline-flex;
 }
@@ -154,17 +152,19 @@ section:hover{
     font-family: 'Yanone Kaffeesatz';    
     padding-top: 7px;
     width: 60px;
-    border: none;
+    border: 0px ;
     border-left: 2px solid var(--primary-green);
     color: var(--secondary-gray);
 }
 .btn-info{
+    grid-column: 1/2;
+    grid-row:6/7;
     font-family: 'TickingTimebombBB_ital';
     border-radius: 50%;
     width: 40px;
     height: 40px;
     font-size: 35px;
-    margin: -5px 0 5px 0;
+    margin: 0px 0 5px 0;
 }
 #info{
     background-color: var(--transparent-black);
@@ -197,16 +197,15 @@ section:hover{
     border-radius: 0px 0px 0px 40%;
     position: absolute;
     right: 20px;
-    margin-right: 5px;
+    margin-right: 4px;
     width: 50px;
     background-color: var(--black);
 }
 #info .info-page-selector-container .btn-info-selector{
     width: 50px;
-    margin-right: 5px;
     border-left: none;
     border-right: none;
-    background: none;
+    background-color: rgba(0, 0, 0, 0.000)
 }
 #info .info-page-selector-container .btn-info-selector-end{
     border-bottom: none;
@@ -290,9 +289,10 @@ section:hover{
 .dissable{
     display: none;
 }
-@media screen and (max-width: 560px) { /* considero que esta linea no es necesaria por que seria extremadamente raro encontrar a una persona con una pantalla con un ancho inferior a 600px */
+@media screen and (max-width: 560px) { 
     #info .info-page-selector-container{
         right: 0px;
+        margin-right: 5px;
     }
     main{
         padding: 0;
