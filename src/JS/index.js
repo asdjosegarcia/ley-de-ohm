@@ -147,7 +147,8 @@ const btnCalcResMah = document.querySelector('#btn-calc-res-mah')//boton "mAh" q
 const matOperationResistance = document.querySelector('#mathematical-operation-resistance') //span que contiene la operacion matematica que se realiza
 const ampMahSimbolResistance = document.querySelector('#Amp-mAh-symbol-resistance')//span que varia entre A y mAh
 
-
+// streamCalcVolt.
+// resitenceCalcVolt
 
 
 // btnCalcVolt.addEventListener('click', calcVoltage)
