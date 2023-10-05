@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////global variables
+/* ////////////////////////////////////////////////////global variables
 let calcVoltMah = false;
 let calcResMah = false;
 let calcStreamMah = false;
@@ -94,3 +94,4 @@ function calcResistance() {
 
 }
 
+ */

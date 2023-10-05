@@ -1,4 +1,4 @@
-/////////////////////////////////items
+/* /////////////////////////////////items
 const homeInfo=document.querySelector('#home-first-info-page-container');
 const homeInfoTwo=document.querySelector('#home-second-info-page-container');
 const infoPageVoltage=document.querySelector('#voltage-first-info-page-container');
@@ -37,5 +37,5 @@ function enableDisabble(itemForEnable){
         itemForDissable=itemForEnable;
     }
 }
-
+ */
 

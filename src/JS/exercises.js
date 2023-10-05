@@ -1,4 +1,4 @@
-//////////////////////////////////general-variables
+/* //////////////////////////////////general-variables
 const resistanceVariableChallenge = document.querySelectorAll('.resistance-variable-challenge')//resitencia en circuito
 const voltageVariableChallenge = document.querySelectorAll('.voltage-variable-challenge')// voltaje en circuito
 const streamVariableChallenge = document.querySelectorAll('.stream-variable-challenge')// corriente en circuito
@@ -72,4 +72,4 @@ function streamReveal() {
 }
 function resitanceReveal() {
     resistanceResistanceChellenge.textContent = resistanceResult
-}
+} */
