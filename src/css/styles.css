@@ -46,7 +46,7 @@ section{
     border: 4px Double  var(--primary-green);
     border-radius: 3px;
     display: grid; 
-    grid-template-columns: 23% auto .4fr;
+    grid-template-columns: 23% auto 15%;
     grid-template-rows: repeat(5,auto);
     row-gap: 10px;
     align-items: center;
@@ -81,6 +81,7 @@ section:hover{
     border-radius: 5px;
     border: solid 2px var(--primary-green);
     height: 40px;
+
 }
 .section-input-container .section-input{
     margin-top:3px;
@@ -278,7 +279,10 @@ section:hover{
 .dissable{
     display: none;
 }
-@media screen and (max-width: 700px) { 
+@media screen and (max-width: 700px) { /* tamaños menores a 700 */
+    section{
+        grid-template-columns: 23% auto 10%;
+    }
     #info .info-page-selector-container{
         right: 0px;
         margin-right: 5px;
@@ -292,8 +296,5 @@ section:hover{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         min-width: 920px;
-    }
-    .question-mark{
-        width: 47%;
     }
 }

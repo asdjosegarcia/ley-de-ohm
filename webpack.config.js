@@ -11,7 +11,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
+                test: /\.(js|jsx)$/,//aqui no usamos jsx pero no hay problemas con dejarlo ahi
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
@@ -49,4 +49,11 @@ module.exports = {
             filename: '[name].css' //sale con el nombre main.css, por que en module .export configuramos que la salida seria main.js, por lo tanto esto seria main .css
         }),
     ],
+    devServer: {
+        static: {
+          directory: path.join(__dirname, 'dev-server'),//segun entiendo esto es para indicarle a devserver cual sera el directorio que tiene que ejecutar
+        },
+        compress: true,
+        port: 9000,
+      },
 };
