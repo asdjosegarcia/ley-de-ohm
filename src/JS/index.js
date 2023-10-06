@@ -1,4 +1,4 @@
-import '../css/normalize.css';
+import '../css/normalize.css';//ELIMINAR ESTO PARA TESTEAR SIN WEBPACK!
 import '../css/styles.css';
 
 ////////////////////////////////////////////////////navigation
@@ -124,7 +124,7 @@ let calcResMah = false;
 let calcStreamMah = false;
 /////////////////////////////////////////////////////voltageCalc
 const streamCalcVolt = document.querySelector('#input-stream-calc-voltage')//input corriente
-const resitenceCalcVolt = document.querySelector('#input-resistance-calc-voltage')//input resitencia
+const resitanceCalcVolt = document.querySelector('#input-resistance-calc-voltage')//input resitencia
 // const btnCalcVolt = document.querySelector('#btn-calc-volt')//boton "calcular"
 const resultCalcVoltageSpan = document.querySelector('#calc-voltage-result')//span donde se muestra el resultado
 const btnCalcVoltMah = document.querySelector('#btn-calc-volt-mah')//boton "mAh" que alterna entre miliampers y ampers
@@ -147,8 +147,14 @@ const btnCalcResMah = document.querySelector('#btn-calc-res-mah')//boton "mAh" q
 const matOperationResistance = document.querySelector('#mathematical-operation-resistance') //span que contiene la operacion matematica que se realiza
 const ampMahSimbolResistance = document.querySelector('#Amp-mAh-symbol-resistance')//span que varia entre A y mAh
 
-// streamCalcVolt.
-// resitenceCalcVolt
+
+streamCalcVolt.addEventListener("input",()=>calcVoltage())//añadimos on oninput ya que webpack no toma la funcion si la llamamos desde el html
+resitanceCalcVolt.addEventListener("input",()=>calcVoltage())
+voltageCalcStream.addEventListener("input",()=>calcStream())
+resistanceCalcStream.addEventListener("input",()=>calcStream())
+voltageCalcResistance.addEventListener("input",()=>calcResistance())
+streamCalcResistance.addEventListener("input",()=>calcResistance())
+
 
 
 // btnCalcVolt.addEventListener('click', calcVoltage)
@@ -160,7 +166,7 @@ btnCalStreamcMah.addEventListener('click', () => { calcStreamMah = !calcStreamMa
 
 
 function calcVoltage() {
-    const resistance = resitenceCalcVolt.value
+    const resistance = resitanceCalcVolt.value
     const stream = streamCalcVolt.value
     if (!stream == "" && !resistance == "") {
         voltage = stream * resistance;
@@ -214,5 +220,4 @@ function calcResistance() {
     matOperationResistance.innerText = (calcResMah) ? 'X1000 /':'/'
 
 }
-
 

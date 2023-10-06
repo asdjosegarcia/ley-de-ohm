@@ -22,7 +22,6 @@ background-image:  linear-gradient(#2c2c2c 1.4000000000000001px, transparent 1.4
 background-size: 35px 35px, 35px 35px, 7px 7px, 7px 7px;
 background-position: -1.4000000000000001px -1.4000000000000001px, -1.4000000000000001px -1.4000000000000001px, -0.7000000000000001px -0.7000000000000001px, -0.7000000000000001px -0.7000000000000001px;
     font-family: 'Yanone Kaffeesatz','TickingTimebombBB_ital', sans-serif;
-    /* min-width: 510px; */
 }
 .header-title {
     text-align: center;
@@ -173,16 +172,6 @@ section:hover{
     grid-template-columns: repeat(1,auto);
     grid-template-rows: repeat(1,auto);
 } 
-/* .question-mark{
-    font-family: 'TickingTimebombBB_ital';
-    font: bolder;
-    position: absolute;
-    color: var(--opaque-green) ;
-    user-select: none;
-    font-size: 300px;
-    width: 95%;
-    z-index: -1;
-} */
 #info .info-page{
     padding: 1% 0 0% 1.5%;
     display: grid;
@@ -214,7 +203,7 @@ section:hover{
     height: 250px;
     grid-column: 3/4;
     grid-row: 1/4;
-    padding-top: 10px;
+    padding: 10px 10px 0 0;
 }
 #info .first-info-page .first-page-text{
     grid-column: 1/3;
@@ -289,7 +278,7 @@ section:hover{
 .dissable{
     display: none;
 }
-@media screen and (max-width: 560px) { 
+@media screen and (max-width: 700px) { 
     #info .info-page-selector-container{
         right: 0px;
         margin-right: 5px;

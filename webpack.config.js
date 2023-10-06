@@ -1,23 +1,15 @@
-const path=require('path');
+const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
-module.exports={
-/*     module.exports = {
-        entry: 'index.js',
-        output: {
-          path: path.resolve(__dirname, './dist'),
-          filename: 'index_bundle.js',
-        },
-        plugins: [new HtmlWebpackPlugin()],
-      }; */
-    entry:'./src/JS/index.js',//punto de entrada
-    output:{//salida
-        filename:'main.js',//carpeta de salida
-        path:path.resolve(__dirname,'dist'),//
+module.exports = {
+    entry: './src/JS/index.js',//punto de entrada
+    output: {//salida
+        filename: 'main.js',//carpeta de salida del js principal
+        path: path.resolve(__dirname, 'dist'),//
     },
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
@@ -33,23 +25,28 @@ module.exports={
                 }]
             },
             {
-                test:/\.css$/,
+                test: /\.css$/,
                 exclude: /node_modules/,
-                use:[
-                    'style-loader',
+                use: [
+                    MiniCssExtractPlugin.loader,//
+                    // 'style-loader', //se desactivo ya que usaremos MiniCssExtractPlugin
                     'css-loader',
                 ],
             },
             {
-                test:/\.(png|svg|mp3|jp(e*)g|gif)$/,
+                test: /\.(png|svg|mp3|jp(e*)g|gif)$/,
                 exclude: /node_modules/,
-                type:'asset'//asset viene con webpack, reemplazo a varios plugins y loaders de imagenes
+                type: 'asset'//asset viene con webpack, reemplazo a varios plugins y loaders de imagenes
             },
         ],
     },
-    plugins: [new HtmlWebpackPlugin({
-        template: './index.html',  // Ruta de tu archivo HTML de entrada
-        filename: 'index.html',      // Nombre del archivo HTML de salida
-    })],
-
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './index.html',  // Ruta de tu archivo HTML de entrada
+            filename: 'index.html',      // Nombre del archivo HTML de salida
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css' //sale con el nombre main.css, por que en module .export configuramos que la salida seria main.js, por lo tanto esto seria main .css
+        }),
+    ],
 };
