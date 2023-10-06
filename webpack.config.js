@@ -6,7 +6,7 @@ module.exports = {
     entry: './src/JS/index.js',//punto de entrada
     output: {//salida
         filename: 'main.js',//carpeta de salida del js principal
-        path: path.resolve(__dirname, 'dist'),//
+        path: path.resolve(__dirname, 'docs'),//
     },
     module: {
         rules: [
