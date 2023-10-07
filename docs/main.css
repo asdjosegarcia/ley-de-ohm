@@ -639,16 +639,20 @@ section:hover{
     }
     section{
         grid-template-columns: 23% auto 10%;
-        /* border-right:none ; */
-        /* border-left: none; */
+        border-right: 0px solid  rgba(0, 0, 0, 0) ;
+        border-left: 0px solid  rgba(0, 0, 0, 0);
+    }
+    #btn-calc-stream-mah{
+        border: 0px solid rgba(0, 0, 0, 0);/* en mobile surge un bug con los bordes por lo que aplico este codigo que se contradice*/
+        border-left: 2px solid var(--primary-green) ;
     }
     #info .info-page-selector-container{
         right: 0px;
         margin-right: 5px;
+        border-radius: 0px 0 0 30%;/* redefinimos por bug en mobil */
     }
     #info .first-info-page .img-ohm-triangle{
-        height: 200px;
-        /* padding: 40px 40px 0 0; */
+        height: 220px;
     }
     #info .voltage-challenge{
         margin-left: 30%;
