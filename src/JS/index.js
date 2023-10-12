@@ -166,7 +166,7 @@ function calcVoltage() {
     const resistance = resitanceCalcVolt.value
     const stream = streamCalcVolt.value
     if (!stream == "" && !resistance == "") {
-        voltage = stream * resistance;
+        let voltage = stream * resistance;
         if (calcVoltMah) {
             voltage = voltage / 1000
         } 
@@ -183,7 +183,7 @@ function calcStream() {
     const voltage = voltageCalcStream.value
     const resistance = resistanceCalcStream.value
     if (!voltage == "" && !resistance == "") {
-        stream = Number(voltage / resistance);
+        let stream = Number(voltage / resistance);
         if (calcStreamMah) {
             stream = stream * 1000
             resultCalcStreamSpan.innerText = stream.toFixed(2) + ' mAh'
@@ -204,7 +204,7 @@ function calcResistance() {
     const voltage = voltageCalcResistance.value
     const stream = streamCalcResistance.value
     if (!stream == "" && !voltage == "") {
-        resistance = voltage / stream
+        let resistance = voltage / stream
         if (calcResMah) {
             resistance = resistance * 1000 
         } 

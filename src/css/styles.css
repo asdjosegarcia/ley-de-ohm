@@ -301,8 +301,15 @@ section:hover{
         margin-right: 5px;
         border-radius: 0px 0 0 30%;/* redefinimos por bug en mobil */
     }
+    #info .first-info-page .btn-next{
+        margin: 4% 0 4% 0;
+    }
     #info .first-info-page .img-ohm-triangle{
-        height: 220px;
+        height: 210px;
+        margin-right: 10px;
+    }
+    #info .variable-info-page .img-example-circuit{
+        margin-bottom: 3%;
     }
     #info .voltage-challenge{
         margin-left: 30%;
