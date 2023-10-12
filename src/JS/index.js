@@ -78,7 +78,6 @@ let streamResult = '0.015 A';
 function regenerate(challengeOperation) {
     const resistance = (Math.floor(Math.random() * (200 - 10 + 1)) + 10) * 10//numero entero aleatorio entre 2000 que termina en 0
     const voltage = (Math.random() * (120 - 1 + 1) + 1).toFixed(2) //numero aleatorio entre 120 y 1 con 2 decimales
-    console.log(voltage)
     const stream = (Math.random() * (3 - 0) + 0).toFixed(3) //numero decimal enetre 1 y 10, ojo toFixed lo vuelve texto
     switch (true) {
         case (challengeOperation === 'voltage'):
